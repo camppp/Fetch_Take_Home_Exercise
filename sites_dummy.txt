@@ -1,0 +1,139 @@
+  - name: Google
+    url: https://www.google.com/
+    method: GET
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    body: ""
+
+  - name: Facebook
+    url: https://www.facebook.com/
+    method: GET
+    headers:
+      Accept-Language: en-US,en;q=0.9
+    body: ""
+
+  - name: YouTube
+    url: https://www.youtube.com/
+    method: GET
+    headers:
+      Referer: "https://www.google.com/"
+    body: ""
+
+  - name: Twitter
+    url: https://twitter.com/
+    method: GET
+    headers:
+      Authorization: "Bearer ABC123456"
+    body: ""
+
+  - name: Instagram
+    url: https://www.instagram.com/
+    method: GET
+    headers:
+      Cookie: "session_id=12345"
+    body: ""
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/
+    method: GET
+    headers:
+      X-Requested-With: "XMLHttpRequest"
+    body: ""
+
+  - name: Amazon
+    url: https://www.amazon.com/
+    method: GET
+    headers:
+      Host: "www.amazon.com"
+    body: ""
+
+  - name: Wikipedia
+    url: https://en.wikipedia.org/
+    method: GET
+    headers:
+      Cache-Control: "no-cache"
+    body: ""
+
+  - name: Reddit
+    url: https://www.reddit.com/
+    method: GET
+    headers:
+      User-Agent: "RedditBot/1.0"
+    body: ""
+
+  - name: Netflix
+    url: https://www.netflix.com/
+    method: GET
+    headers:
+      Accept: "application/json"
+    body: ""
+
+  - name: GitHub
+    url: https://github.com/
+    method: GET
+    headers:
+      Authorization: "Bearer XYZ789"
+    body: ""
+
+  - name: Stack Overflow
+    url: https://stackoverflow.com/
+    method: GET
+    headers:
+      X-Requested-With: "XMLHttpRequest"
+    body: ""
+
+  - name: Airbnb
+    url: https://www.airbnb.com/
+    method: GET
+    headers:
+      Accept-Language: en-US,en;q=0.9
+    body: ""
+
+  - name: Uber
+    url: https://www.uber.com/
+    method: GET
+    headers:
+      User-Agent: "UberApp/2.0"
+    body: ""
+
+  - name: Spotify
+    url: https://www.spotify.com/
+    method: GET
+    headers:
+      Accept: "application/json"
+    body: ""
+
+  - name: Apple
+    url: https://www.apple.com/
+    method: GET
+    headers:
+      X-Apple-ID: "123456"
+    body: ""
+
+  - name: Microsoft
+    url: https://www.microsoft.com/
+    method: GET
+    headers:
+      Host: "www.microsoft.com"
+    body: ""
+
+  - name: Adobe
+    url: https://www.adobe.com/
+    method: GET
+    headers:
+      User-Agent: "AdobeClient/1.0"
+    body: ""
+
+  - name: CNN
+    url: https://www.cnn.com/
+    method: GET
+    headers:
+      Accept-Language: en-US,en;q=0.9
+    body: ""
+
+  - name: BBC
+    url: https://www.bbc.com/
+    method: GET
+    headers:
+      Referer: "https://www.google.com/"
+    body: ""
