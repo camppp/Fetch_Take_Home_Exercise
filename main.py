@@ -2,14 +2,18 @@ import yaml
 import sys
 import time
 import requests
+import concurrent.futures
 from threading import Thread
 from urllib.parse import urlparse
 from typing import List
 from requests import RequestException
+from concurrent.futures import ThreadPoolExecutor
+
 
 domain_status_map = {}
 HEALTHCHECK_INTERVAL_SECONDS = 2
 REQUEST_TIMEOUT_SECONDS = 0.5
+MAX_THREADS = 200
 
 
 class EndPointRecord:
@@ -105,10 +109,16 @@ def main(argv):
     else:
         try:
             parsed_endpoints = parse_endpoints(argv[0])
-            while True:
-                start_threads(parsed_endpoints)
-                display_availability()
-                time.sleep(HEALTHCHECK_INTERVAL_SECONDS)
+            with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+                while True:
+                    futures = []
+                    for endpoint in parsed_endpoints:
+                        future = executor.submit(check_endpoint_status, endpoint)
+                        futures.append(future)
+                    for _ in concurrent.futures.as_completed(futures):
+                        pass
+                    display_availability()
+                    time.sleep(HEALTHCHECK_INTERVAL_SECONDS)
         except KeyboardInterrupt:
             print("Ctrl-C Pressed, Stopping Program...")
         except yaml.YAMLError:
